@@ -1,10 +1,5 @@
-"""
-Локальные данные персонажей Star Wars для резервной загрузки.
-Используется если API недоступно.
-"""
-
 LOCAL_CHARACTERS = [
-    # Основные персонажи (первые 20)
+    #Основные
     {
         "id": 1,
         "name": "Luke Skywalker",
@@ -115,7 +110,6 @@ LOCAL_CHARACTERS = [
         "mass": "77",
         "skin_color": "fair"
     },
-    # Еще 10 персонажей
     {
         "id": 11,
         "name": "Anakin Skywalker",
@@ -229,5 +223,4 @@ LOCAL_CHARACTERS = [
 ]
 
 def get_local_characters(count: int = 20) -> list:
-    """Возвращает локальных персонажей"""
     return LOCAL_CHARACTERS[:count]

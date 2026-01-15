@@ -14,9 +14,9 @@ async def test_api():
                     data = await response.json()
                     print(f"Данные получены: {data.get('result', {}).get('properties', {}).get('name')}")
                 else:
-                    print(f"❌ Ошибка: {response.status}")
+                    print(f"Ошибка: {response.status}")
         except Exception as e:
-            print(f"❌ Ошибка подключения: {e}")
+            print(f"Ошибка подключения: {e}")
 
         #Тест 2: Страница
         print("\nТест страницы")
@@ -27,9 +27,9 @@ async def test_api():
                     data = await response.json()
                     print(f"Записей на странице: {len(data.get('results', []))}")
                 else:
-                    print(f"❌ Ошибка: {response.status}")
+                    print(f"Ошибка: {response.status}")
         except Exception as e:
-            print(f"❌ Ошибка подключения: {e}")
+            print(f"Ошибка подключения: {e}")
 
 
 if __name__ == "__main__":
